@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "dealerplate";
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+@font-face{
+    font-family: "dealerplate";
+    src: url(../multimedia/dealerplate\ california.ttf);
+}
+
+.fas{
+    font-size: 2rem;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* WRAPPER */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#wrapper{
+    height: 100vh;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* MENU */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#navegador__opciones{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 1rem;
+    border: 2px solid;
+    z-index: 10;
+}
+
+#navegador__opciones:hover ~ #navegador__menu{
+    display: block;
+}
+
+#navegador__menu{
+    position: absolute;
+    width: 20%;
+    bottom: 0;
+    top: 0;
+    z-index: 5;
+    display: bolck;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    display: none;
+}
+
+#navegador__menu:hover{
+    display: block;
+}
+
+
+#navegador__menu div{
+    margin: 8rem 1.6rem;
+    font-size: 2rem;
+}
+#navegador__menu li{
+    margin-top: 1rem;
+}
+
+/* efecto subrayado basado en: https://www.esthersola.com/subrayado-animado-de-enlaces-con-css/#*/
+#navegador__menu li a{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+#navegador__menu li a:hover{
+    background-size: 100% 2px;
+}
+
+/*hombre | mujer*/
+#navegador__menu li:first-child{
+    display: flex;
+}
+#navegador__menu li:first-child p{
+    margin-right: .5rem;
+}
+/*rebajas*/
+#navegador__menu li:nth-child(3) a{
+    color: rgb(255, 0, 0);
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* CONTENIDO */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#contenido{
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*titulo*/
+#contenido__titulo{
+    position: absolute;
+    left: 50%;
+    margin-left: -11.5rem;
+    z-index: 1;
+}
+#titulo__texto{
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+/*nombres*/
+#contenido__nombres{
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+.nombres__nombre{
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    width: 50%;
+    transform: rotate(90deg);
+}
+
+
+/*fotos*/
+#contenido__fotos{
+    display: flex;
+    z-index: 30;
+}
+.contenido__generos{
+    width: 100%;
+}
+.contenido__foto{
+    width: 100%;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* FOOTER */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#pie{
+    display: grid;
+    grid-template-columns: 97% max-content;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: .5rem;
+}
+#pie__texto{
+    text-align: center;
+}
+#pie__enlace{
+    text-decoration: underline;
+}
+#pie:target{
+    display: none;
+/*    opacity: 0;
+    transition: all 0.5s linear;*/
+}

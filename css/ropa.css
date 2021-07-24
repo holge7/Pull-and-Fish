@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "dealerplate";
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@font-face{
+    font-family: "dealerplate";
+    src: url(../multimedia/dealerplate\ california.ttf);
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* WRAPPER */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* ANUNCIO */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#anuncio{
+    background-color: red;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: .5rem;
+}
+#anuncio__texto{
+    display: inline;
+    letter-spacing: .05rem;
+}
+#anuncio__close{
+    float: right;
+    margin-right: 2rem;
+    color: rgb(255, 255, 255);
+}
+#anuncio:target{
+    display: none;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* SUPERIOR */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#superior{
+    display: flex;
+    box-shadow: 5px 0 5px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+#cabezera__titulo a{
+    color: black;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* MENU */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#superior__navegador{
+    width: 20%;
+}
+
+#navegador__opciones{
+    margin-left: 2rem;
+    padding: 1rem;
+    z-index: 10;
+    color: black;
+}
+
+#navegador__opciones:hover ~ #navegador__menu{
+    display: block;
+}
+
+#navegador__menu{
+    position: absolute;
+    width: 20%;
+    height: 100vh;
+    bottom: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    font-weight: bold;
+    letter-spacing: .15rem;
+    display: none;
+}
+
+#navegador__menu:hover{
+    display: block;
+}
+
+
+#navegador__menu div{
+    margin: 10rem 1.6rem;
+    font-size: 2rem;
+}
+#navegador__menu li{
+    margin-top: 1rem;
+}
+
+/* efecto subrayado basado en: https://www.esthersola.com/subrayado-animado-de-enlaces-con-css/#*/
+#navegador__menu li a{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+#navegador__menu li a:hover{
+    background-size: 100% 2px;
+}
+
+/*hombre | mujer*/
+#navegador__menu li:first-child{
+    display: flex;
+}
+#navegador__menu li:first-child p{
+    margin-right: .5rem;
+}
+/*rebajas*/
+#navegador__menu li:nth-child(3) a{
+    color: rgb(255, 0, 0);
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* CABEZERA */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#superior__cabezera{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* BUSCADOR */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#superior__derecha{
+    width: 20%;
+    text-align: center;
+    display: flex;
+}
+#superior__derecha > div{
+    margin-right: 1rem;
+}
+#superior__derecha > div > a{
+    color: rgb(0, 0, 0);
+}
+
+
+/*buscador*/
+#derecha__buscador{
+    border-bottom: 3px solid ;
+}
+#buscador__input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: .2rem;
+    border: 0;
+    text-transform: capitalize;
+}
+#buscador__input:focus{
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+}
+
+/*Sesion*/
+#sesion__inicio{
+    position: absolute;
+    background-color: white;
+    right: 1rem;
+    top: 2rem;
+    width: 20%;
+    display: none;
+}
+#sesion__inicio:target{
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+}
+.sesion__fondo{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    display: none;
+}
+#sesion__inicio:target ~ .sesion__fondo{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+
+
+
+
+
+#inicio__cabezera{
+    display: grid;
+    grid-template-columns: 95% 5%;
+    grid-template-rows: 2rem;
+    margin: 1rem;
+    letter-spacing: .1rem;    
+}
+#inicio__cabezera p, #inicio__cabezera i{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: black;
+}
+#inicio__cabezera i{
+    color: rgb(255, 0, 0);
+}
+
+#inicio__mail{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+#inicio__mail>input{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    border: none;
+    border-bottom: .1rem solid rgb(173, 173, 173);
+    background-color: rgb(247, 247, 247);
+}
+#inicio__mail>input:first-child{
+    margin-bottom: 2rem;
+}
+#inicio__mail>input:focus{
+    outline: none;
+    border-bottom: .1rem solid rgb(116, 116, 116);
+}
+
+#inicio__recuperar a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    color: rgb(0, 0, 0);
+    border-bottom: .1rem solid;
+    float: right;
+    margin: 0 2rem 2rem 0;
+}
+
+#inicio__mantener{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    margin-bottom: 1rem;
+}
+#inicio__mantener p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+}
+
+#inicio__acceder p{
+    border: .1rem solid;
+    margin: 2rem;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem; 
+}
+#inicio__acceder p a{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: .1rem solid;
+}
+#inicio__acceder p:first-child{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#inicio__acceder p:nth-child(2):hover{
+    transition: background-color .7s;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#inicio__acceder p:nth-child(3){
+    border: none;
+    background-color: rgb(238, 238, 238);
+}
+#inicio__acceder p:nth-child(4){
+    background-color: rgb(59, 89, 152);
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/* CONTENIDO */
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+#contenido{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.contenido__articulo{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    /* he copiado estas sombras de https://www.hostinger.es/*/
+    box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 16px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.articulo__foto:hover .foto{
+    transform: scale(1.2);
+    transition: transform .2s;
+}
+
+
+.articulo__foto{
+    width: 25.5rem;
+    height: 40rem;
+    overflow: hidden;
+    z-index: 0;
+}
+.foto{
+    width: 25.5rem;
+    height: 40rem;
+}
+.articulo__descuento{
+    padding: .2rem 1rem;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    bottom: 3rem;
+    left: 1rem;
+}
+.articulo__descripcion{
+    text-align: center;
+    font-family: Arial;
+    margin-bottom: .5rem;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+}
+.articulo__precio{
+    z-index: 3;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    color: red;
+    margin-bottom: .5rem;
+}
+.articulo__precio p:nth-child(2){
+    color: black;
+    text-decoration: line-through;
+    margin-left: 1rem;
+}
