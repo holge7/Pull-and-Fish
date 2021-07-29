@@ -22,7 +22,8 @@ a{
 /* WRAPPER */
 /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
 #wrapper{
-    height: 100vh;
+    height: 90vh;
+    overflow: hidden;
 }
 
 
@@ -140,6 +141,8 @@ a{
     display: flex;
     z-index: 30;
     height: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 .contenido__generos{
     width: 100%;
