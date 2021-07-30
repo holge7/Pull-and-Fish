@@ -384,6 +384,15 @@ a{
 
 
 
+
+    /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+    /*           */
+    /*   MEDIA   */
+    /*   QUERIS  */
+    /*           */
+    /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+
 @media(max-width: 1665px){
 
     /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
@@ -717,12 +726,13 @@ a{
     /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
 
     #contenido{
-        grid-template-columns: repeat(auto-fit, minmax(max-content, 5rem));
+        grid-template-columns: repeat(auto-fit, minmax(max-content, 7rem));
         margin: 5rem 4rem;
+        gap: 1rem;
     }
     .articulo__foto{
-        width: 7rem;
-        height: 13.5rem;
+        width: 10rem;
+        height: 16.5rem;
     }
     .foto{
         width: 100%;
