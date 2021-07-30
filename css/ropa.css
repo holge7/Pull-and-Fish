@@ -755,3 +755,15 @@ a{
 
     
 }
+
+@media(max-width: 368px){
+    #contenido{
+        grid-template-columns: repeat(auto-fit, minmax(max-content, 6rem));
+        margin: 5rem 4rem;
+        gap: 1rem;
+    }
+    .articulo__foto{
+        width: 8rem;
+        height: 14.5rem;
+    }
+}
